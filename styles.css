@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: url('background1.jpg') repeat;
+}
+
+h1 {
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls input {
+    width: 60px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.update-btn, .submit-btn, .next-btn, .show-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.update-btn {
+    background-color: #ffa500; /* Orange */
+    color: white;
+}
+
+.submit-btn {
+    background-color: #0000ff; /* Blue */
+    color: white;
+}
+
+.next-btn {
+    background-color: #ffa500; /* Orange */
+    color: white;
+}
+
+.show-btn {
+    background-color: #ff0000; /* Red */
+    color: white;
+}
+
+.question-container {
+    margin: 20px 0;
+}
+
+.visualization {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visualization div {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007bff;
+    margin: 2px;
+}
+
+.feedback {
+    padding: 10px;
+    margin: 20px 0;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+    border-radius: 5px;
+}
+
+.fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 80%);
+    animation: explode 1s ease-out;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .controls input {
+        width: 50px;
+    }
+
+    .update-btn, .submit-btn, .next-btn, .show-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

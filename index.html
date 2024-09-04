@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לוח הכפל</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>לוח הכפל</h1>
+        <div class="controls">
+            <label for="maxMultiplier">מכפיל מקסימלי:</label>
+            <input type="number" id="maxMultiplier" value="10" min="1" max="20">
+            <label for="maxMultiplicand">מוכפל מקסימלי:</label>
+            <input type="number" id="maxMultiplicand" value="10" min="1" max="20">
+            <button id="updateQuestion" class="update-btn">עדכן שאלה</button>
+        </div>
+        <div id="questionContainer" class="question-container">
+            <span id="questionMultiplier" class="question"></span>
+            <span id="questionSign" class="question"> × </span>
+            <span id="questionMultiplicand" class="question"></span>
+            <input type="number" id="answer" placeholder="תשובה">
+        </div>
+        <div id="visualization" class="visualization"></div>
+        <div class="buttons">
+            <button id="submitAnswer" class="submit-btn">שלח</button>
+            <button id="nextQuestion" class="next-btn">שאלה הבאה</button>
+            <button id="showAnswer" class="show-btn">הצג תשובה</button>
+        </div>
+        <div id="feedback" class="feedback"></div>
+    </div>
+    <audio id="correctSound" src="correct-sound.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
